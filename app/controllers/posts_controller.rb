@@ -6,4 +6,10 @@ class PostsController < ApplicationController
     @posts = Post.all
 
   end
+
+  #投稿詳細ページ
+  def show
+
+  end
+  
 end

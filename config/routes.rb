@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get "about" => "home#about"
   
   #投稿一覧ページ
-  get 'posts/index' => "posts#index"
+  get "posts/index" => "posts#index"
+
+  #投稿詳細ページ
+  get "posts/:id" => "posts#show"
 
 end
