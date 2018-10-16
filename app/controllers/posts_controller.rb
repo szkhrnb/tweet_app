@@ -36,4 +36,10 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  #投稿削除
+  def destroy
+
+    redirect_to("/posts/index")
+  end
+
 end

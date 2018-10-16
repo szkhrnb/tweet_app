@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   post "posts/create" => "posts#create"
   post "posts/:id/update" => "posts#update"
 
+  #投稿削除
+  post "posts/:id/destroy" => "posts#destroy" 
+
   #投稿詳細ページ
   get "posts/:id" => "posts#show"
 
