@@ -38,7 +38,8 @@ class PostsController < ApplicationController
 
   #投稿削除
   def destroy
-
+    @post = Post.find_by(id:params[:id])
+    @post.destroy
     redirect_to("/posts/index")
   end
 
