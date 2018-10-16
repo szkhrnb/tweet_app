@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(content:params[:content])
+    @post = Post.new(content: params[:content])
     @post.save
     redirect_to("/posts/index")
   end
@@ -32,9 +32,12 @@ class PostsController < ApplicationController
   def update
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
-    @post.save
-    redirect_to("/posts/index")
-  end
+     if @post.save
+       redirect_to("/posts/index")
+       else
+        redirect_to("/posts/#{@post.id}/edit")
+      end
+    end
 
   #投稿削除
   def destroy
