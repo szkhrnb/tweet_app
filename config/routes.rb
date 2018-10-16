@@ -11,8 +11,10 @@ Rails.application.routes.draw do
 
   #新規投稿ページ
   get "posts/new" => "posts#new"
+  post "posts/create" => "posts#create"
 
   #投稿詳細ページ
   get "posts/:id" => "posts#show"
+
 
 end
