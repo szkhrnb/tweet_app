@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+
+
   #ユーザー登録ページ
   get "signup" => "users#new"
+  post "users/create" => "users#create" 
 
+   
   #ユーザー一覧ページ
   get 'users/index' => "users#index"
 
