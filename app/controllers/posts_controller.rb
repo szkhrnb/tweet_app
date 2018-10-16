@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def create
 
+    redirect_to("/posts/index")
   end
 
 end
