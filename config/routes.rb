@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  #ユーザー登録ページ
+  get "signup" => "users#new"
+
+  #ユーザー一覧ページ
+  get 'users/index' => "users#index"
+
+  #ユーザー詳細ページ
+  get "users/:id" => "users#show"
+
   #トップページ
   get "/" => "home#top"
   
@@ -12,6 +21,8 @@ Rails.application.routes.draw do
   #新規投稿ページ
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
+
+  #投稿編集
   post "posts/:id/update" => "posts#update"
 
   #投稿削除
@@ -20,7 +31,7 @@ Rails.application.routes.draw do
   #投稿詳細ページ
   get "posts/:id" => "posts#show"
 
-  #投稿編集ページ
+  #投稿一覧ページ
   get "posts/:id/edit" => "posts#edit"
 
 end

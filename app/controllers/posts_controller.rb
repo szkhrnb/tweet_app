@@ -27,12 +27,13 @@ class PostsController < ApplicationController
     end
   end
 
-  #投稿編集ページ
+  #投稿一覧ページ
   def edit
 
-     @post = Post.find_by(id:params[:id])
+    @post = Post.find_by(id:params[:id])
   end
 
+  #投稿編集
   def update
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
