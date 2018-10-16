@@ -9,7 +9,12 @@ class PostsController < ApplicationController
 
   #投稿詳細ページ
   def show
-
+    @post = Post.find_by(id:params[:id])  
   end
-  
+
+  #新規投稿ページ
+  def new
+ 
+  end
+
 end

@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   #投稿一覧ページ
   get "posts/index" => "posts#index"
 
+  #新規投稿ページ
+  get "posts/new" => "posts#new"
+
   #投稿詳細ページ
   get "posts/:id" => "posts#show"
 
