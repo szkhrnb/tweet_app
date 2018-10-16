@@ -27,6 +27,12 @@
         </li>
       </ul>
     </header>
+    <!-- サクセスメッセージ -->
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
