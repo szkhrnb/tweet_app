@@ -25,7 +25,8 @@ class PostsController < ApplicationController
 
   #投稿編集ページ
   def edit
-
+    
+     @post = Post.find_by(id:params[:id])
   end
 
 end
