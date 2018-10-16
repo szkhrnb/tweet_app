@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   #新規投稿ページ
   def new
- 
+    @post = Post.new
   end
 
   def create
