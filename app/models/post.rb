@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
 
-    varidates :content,{presence: true}
+    varidates :content,{presence: true,length:{maximum: 140}}
 end
