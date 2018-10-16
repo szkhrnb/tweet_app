@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   #投稿詳細ページ
   get "posts/:id" => "posts#show"
 
+  #投稿編集ページ
+  get "posts/:id/edit" => "posts#edit"
 
 end

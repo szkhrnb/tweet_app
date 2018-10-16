@@ -23,4 +23,9 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  #投稿編集ページ
+  def edit
+
+  end
+
 end
