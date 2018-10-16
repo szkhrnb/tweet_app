@@ -19,8 +19,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(content: params[:content])
-    @post.save
+    if @post.save
     redirect_to("/posts/index")
+    else
+      render("posts/new")
+    end
   end
 
   #投稿編集ページ
