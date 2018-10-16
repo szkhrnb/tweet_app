@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 
 
+  #ユーザー編集ページ
+  get "users/:id/edit" => "users#edit"
+  post "users/:id/update" => "users#update"
+
   #ユーザー登録ページ
   get "signup" => "users#new"
   post "users/create" => "users#create" 
